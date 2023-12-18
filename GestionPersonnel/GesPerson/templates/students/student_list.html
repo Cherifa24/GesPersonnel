@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion</title>
+</head>
+<body>
+
+  <h2>Liste des students</h2>
+  <table border="2">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirlstName</th>
+        <th>LasteName</th>
+        <th>last_name</th>
+        <th> pathway</th>
+        
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for elt in  students %}
+      <tr>
+        <td>{{elt.id}}</td>
+        <td>{{elt.first_name}}</td>
+        <td>{{elt.last_name}}</td>
+        <td>{{elt.birth_date}}</td>
+        <td>{{elt.pathway}}</td>
+       
+        <td>
+          <button><a href="{% url 'GesPerson:update_student' student_id=elt.id %}">Editer</a></button>
+          
+        </td>
+      </tr>
+      {% endfor %} 
+
+     
+    </tbody>
+  </table>
+
+ 
+</body>
+</html>
+
+

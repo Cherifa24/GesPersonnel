@@ -1,0 +1,9 @@
+
+<form method="post" action="{% url 'gesperson:update_teacher' teacher_id=teacher.id %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit">Enregistrer</button>
+  </form>
+  

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Personnel</title>
+
+  <!-- Inclure Bootstrap (avec la CDN) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Votre École</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M2 2v26h30V2H2zm14 7.999h6V14h-6V9.999zM16 16h6v4h-6v-4zm-2 10H4v-4h10v4zm0-6H4v-4h10v4zm0-6H4V9.999h10V14zm2 12v-4h6v4h-6zm14 0h-6v-4h6v4zm0-6h-6v-4h6v4zm0-6h-6V9.999h6V14z"/></svg> {% endcomment %}
+          <a class="nav-link" href="{% url 'GesPerson:teacher_list' %}">Liste Eleves</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" href="{% url 'GesPerson:student_list' %}">Liste  student</a>
+
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" href="{% url 'GesPerson:add_teacher' %}">ajouter teacher</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" href="{% url 'GesPerson:add_student' %}">ajouter student</a> 
+        </li> 
+      </ul>
+    </div>
+
+    <!-- Ajouter un bouton de connexion/déconnexion -->
+   
+  </nav>
+
+  <!-- Le reste de votre contenu ici -->
+
+  <!-- Inclure Bootstrap JS (avec la CDN) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

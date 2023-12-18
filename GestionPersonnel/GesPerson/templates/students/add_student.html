@@ -1,0 +1,21 @@
+
+<h2 class="mb-4">Enregistrer un etudiant</h2>
+<button><a href="{% url 'GesPerson:student_list' %}">Students List </a></button><br><br>
+<form method="POST" action="{% url 'GesPerson:add_student' %}">
+  {% csrf_token %}
+  
+  <!-- Display error messages -->
+  {% if form.non_field_errors %}
+    <p class="error">{{ form.non_field_errors }}</p>
+  {% endif %}
+
+  {{ form.first_name.label_tag }} {{ form.first_name }} <br><br>
+  {{ form.last_name.label_tag }} {{ form.last_name }} <br><br>
+  {{ form.birth_date.label_tag }} {{ form.birth_date }} <br><br>
+  {{ form.tel.label_tag }} {{ form.tel }} <br><br>
+  {{ form.email.label_tag }} {{ form.email }} <br><br>
+  {{ form.pathway.label_tag }} {{ form.pathway }} <br> <br>
+
+  <button type="submit">Enregistrer</button>
+</form>
+
